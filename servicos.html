@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <script src="https://kit.fontawesome.com/52d8e49761.js" crossorigin="anonymous"></script>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="CSS_S/style.css"/>
+        <script>
+            document.addEventListener("DOMContentLoaded", function () {
+                fetch('index.html')
+                        .then(response => response.text())
+                        .then(data => {
+                            const tempDiv = document.createElement('div');
+                            tempDiv.innerHTML = data;
+                            const conteudo = tempDiv.querySelector('#cabecalho').innerHTML;
+                            document.querySelector('#cabecalho').innerHTML = conteudo;
+                        })
+                        .catch(error => console.error("Erro ao buscar o conteúdo:", error));
+            });
+        </script>
+        <title>Serviços</title>
+    </head>
+    <body>
+        <header id="cabecalho">
+        </header>
+
+        <div class="texto">
+            <h1>Serviços</h1>
+            <p><strong>Conheça a variedade de serviços que oferecemos para manter e aprimorar a estética do seu veículo. Realizamos cada serviço com máxima atenção aos detalhes e compromisso com a qualidade.</strong></p>
+
+            <div class="service-section">
+                <h2>Lavagem e Limpeza Detalhada</h2>
+                <ul>
+                    <li>Lavagem completa (interna e externa)</li>
+                    <li>Limpeza de estofados e carpetes</li>
+                    <li>Higienização de ar-condicionado</li>
+                    <li>Limpeza de motor</li>
+                </ul>
+            </div>
+
+            <div class="service-section">
+                <h2>Polimento e Espelhamento de Pintura</h2>
+                <ul>
+                    <li>Polimento técnico para remoção de riscos e manchas leves</li>
+                    <li>Espelhamento para brilho extra e acabamento refinado</li>
+                    <li>Correção de pintura</li>
+                </ul>
+            </div>
+
+            <div class="service-section">
+                <h2>Vitrificação e Cristalização</h2>
+                <ul>
+                    <li>Aplicação de proteção cerâmica para maior durabilidade do brilho</li>
+                    <li>Cristalização de pintura para uma camada protetora resistente</li>
+                </ul>
+            </div>
+
+            <div class="service-section">
+                <h2>Proteção de Pintura e Envelopamento</h2>
+                <ul>
+                    <li>Película de proteção (PPF) para proteger a pintura contra arranhões e sujeiras</li>
+                    <li>Envelopamento parcial ou total com design personalizado</li>
+                    <li>Película automotiva para personalização e proteção UV</li>
+                </ul>
+            </div>
+
+            <div class="service-section">
+                <h2>Detalhamento Automotivo</h2>
+                <ul>
+                    <li>Detalhamento de rodas e pneus</li>
+                    <li>Limpeza e hidratação de couro e plásticos</li>
+                    <li>Polimento de vidros e faróis</li>
+                    <li>Detalhamento de acabamentos internos e externos</li>
+                </ul>
+            </div>
+
+            <div class="service-section">
+                <h2>Descontaminação e Odorização</h2>
+                <ul>
+                    <li>Remoção de contaminantes (piche, resina, fuligem)</li>
+                    <li>Aplicação de odorizadores específicos para o interior do veículo</li>
+                </ul>
+            </div>
+
+            <div class="service-section">
+                <h2>Revitalização de Faróis</h2>
+                <ul>
+                    <li>Polimento e restauração de faróis para eliminar amarelamento e opacidade</li>
+                    <li>Aplicação de película de proteção UV</li>
+                </ul>
+            </div>
+
+            <div class="service-section">
+                <h2>Serviços de Estética para Pneus e Rodas</h2>
+                <ul>
+                    <li>Limpeza e polimento das rodas</li>
+                    <li>Aplicação de protetores e revitalizadores para pneus</li>
+                </ul>
+            </div>
+
+            <div class="service-section">
+                <h2>Consultoria de Personalização</h2>
+                <ul>
+                    <li>Serviço de consultoria para escolha de cores e acabamentos</li>
+                    <li>Recomendação de acessórios de personalização e proteção</li>
+                </ul>
+            </div>
+        </div>
+
+    </body>
+</html>

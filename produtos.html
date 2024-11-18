@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <script src="https://kit.fontawesome.com/52d8e49761.js" crossorigin="anonymous"></script>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="CSS_S/style.css"/>
+        <script>
+            document.addEventListener("DOMContentLoaded", function () {
+                fetch('index.html')
+                        .then(response => response.text())
+                        .then(data => {
+                            const tempDiv = document.createElement('div');
+                            tempDiv.innerHTML = data;
+                            const conteudo = tempDiv.querySelector('#cabecalho').innerHTML;
+                            document.querySelector('#cabecalho').innerHTML = conteudo;
+                        })
+                        .catch(error => console.error("Erro ao buscar o conteúdo:", error));
+            });
+        </script>
+        <title>Produtos</title>
+    </head>
+    <body>
+        <header id="cabecalho">
+        </header>
+        <div class="texto">
+            <h1>Produtos</h1>
+
+            <main class="product-grid">
+                <div class="product-card">
+                    <img class="product-image" src="https://i.postimg.cc/NfNtnJQw/image.png" alt="kit V-Floc" class="product-image">
+                    <h2 class="product-title">Kit V-Floc Shampoo Automotivo + Cera Tok Final Vonixx Luva Pano Microfibra</h2>
+                    <p class="product-sale">Preço: <span class="price-sale">R$ 89,99</span></p>
+                </div>
+
+                <div class="product-card">
+                    <img class="product-image" src="https://i.postimg.cc/907ZTzPQ/image.png" alt="Little Threes" class="product-image">
+                    <h2 class="product-title">Aromatizante Automotivo - Little Trees</h2>
+                    <p class="product-price">De: <span class="price-original">R$ 29,99</span></p>
+                    <p class="product-sale">Por: <span class="price-sale">R$ 19,99</span></p>
+                </div>
+
+                <div class="product-card">
+                    <img class="product-image" src="https://i.postimg.cc/6qXnrtMV/image.png" alt="Kit Limpeza" class="product-image">
+                    <h2 class="product-title">Kit 2 Aplicador de Espuma Acessórios Microfibra Pano Pincel Vonixx</h2>
+                    <p class="product-price">De: <span class="price-original">R$ 120,00</span></p>
+                    <p class="product-sale">Por: <span class="price-sale">R$ 99,99</span></p>
+                </div>
+
+                <div class="product-card">
+                    <img class="product-image" src="https://i.postimg.cc/0NPTBwrh/image.png" alt="Lixeira de Câmbio" class="product-image">
+                    <h2 class="product-title">Lixeira de Câmbio - Feito pela Vó</h2>
+                    <p class="product-price">De: <span class="price-original">R$ 14,99</span></p>
+                    <p class="product-sale">Por: <span class="price-sale">R$ 9,99</span></p>
+                </div>
+        </div>
+    </main>
+</body>
